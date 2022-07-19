@@ -1,0 +1,2 @@
+class Desinger < ApplicationRecord
+end
