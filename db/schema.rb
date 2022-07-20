@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_07_19_135351) do
+ActiveRecord::Schema[7.0].define(version: 2022_07_20_071200) do
   create_table "desingers", force: :cascade do |t|
     t.string "name", null: false
     t.string "email", null: false
@@ -21,4 +21,15 @@ ActiveRecord::Schema[7.0].define(version: 2022_07_19_135351) do
     t.index ["name"], name: "index_desingers_on_name", unique: true
   end
 
+  create_table "posts", force: :cascade do |t|
+    t.string "titel", null: false
+    t.string "text"
+    t.string "fotourl"
+    t.integer "desinger_id", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["desinger_id"], name: "index_posts_on_desinger_id"
+  end
+
+  add_foreign_key "posts", "desingers"
 end
