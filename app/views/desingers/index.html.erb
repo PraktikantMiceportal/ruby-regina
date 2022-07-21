@@ -3,12 +3,29 @@
 <h1>Desingers</h1>
 
 <div id="desingers">
+<table class="table table-hover">
+<thead>
+  <tr>
+    <th scope="col">#</th>
+    <th scope="col">Name</th>
+    <th scope="col">Email</th>
+    <th scope="col">Actions</th>
+  </tr>
+</thead>
+<tbody>
   <% @desingers.each do |desinger| %>
-    <%= render desinger %>
-    <p>
-      <%= link_to "Show this desinger", desinger %>
-    </p>
+    <tr>
+    <td><%= desinger.id %></td>
+      <td><%= desinger.name %></td>
+      <td><%= desinger.email %></td>
+      <td><%= link_to "Show this desinger", desinger,class: "btn btn-outline-info" %></td>
+    </tr>
   <% end %>
+</tbody>
+</table>
+ 
 </div>
 
-<%= link_to "New desinger", new_desinger_path %>
+<%= link_to "New desinger", new_desinger_path, class: "btn btn-outline-primary" %>
+
+<%= link_to "Back to posts", posts_path, class: "btn btn-outline-primary" %>

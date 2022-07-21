@@ -12,6 +12,21 @@
   <% end %>
 
   <div>
+  <%= form.label :titel, style: "display: block" %>
+  <%= form.text_field :titel %>
+  <div>
+    <%= form.label :text, style: "display: block" %>
+    <%= form.text_area :text %>
+    <div>
+    <%= form.label :fotourl, style: "display: block" %>
+    <%= form.text_field :fotourl %>
+    <div>
+    <%= form.label :desinger_id, style: "display: block" %>
+    <%= form.select :desinger_id, Desinger.all.order(name: :asc).collect {|d| [d.name, d.id] }, include_blank: false %>
+  </div>
+    
+
+  <div>
     <%= form.submit %>
   </div>
 <% end %>

@@ -1,0 +1,13 @@
+@import "bootstrap";
+
+h1 { color: rgb(9, 9, 224);
+   font-weight: bold;
+   text-shadow: 0.2ex 0.2ex rgb(51, 197, 222);
+}
+
+article.main {
+   white-space: pre-wrap;
+   margin: 1em;
+   padding: 1em;
+   color: black;
+}
