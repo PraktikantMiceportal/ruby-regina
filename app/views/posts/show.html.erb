@@ -9,11 +9,6 @@
   <%= button_to "Destroy this post", @post, method: :delete, class: "btn btn-outline-danger"%>
 </div>
 
-
-
-<p><%= @comment_body %></p>
-<p><%= @comment_commenter %></p>
-
 <h2>Comments</h2>
 <% @post.comments.each do |comment| %>
   <p>
